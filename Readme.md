@@ -1,6 +1,8 @@
 
 ### ReWriting All ML Algorithms 
-**From Scratch**  
+**From Scratch**  with only
+__pandas__
+__numpy__ 
 
 Deepen Machine Learning Models knowledge of following:
 

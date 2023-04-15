@@ -1,15 +1,24 @@
-###Custom Statistics Function including: 
 
-- sigmoid (z)
+<h4>Custom Statistics Function including: </h4>
 
-- logit (p)
+- <b>sigmoid</b> (z)
 
-- merge_encoded_df (df, column_name)
+- <b>logit</b> (p)
 
-- assign_bias (features_df)
+- <b>merge_encoded_df</b> (df, column_name)
 
-- scale_features (train_df, test_df)
+- <b>assign_bias</b> (features_df)
 
-- confusion_matrix (y_true, y_pred)
+- <b>scale_features</b> (train_df, test_df)
 
-- accuracy_matrix (y_true, y_pred)
+- <b>confusion_matrix</b> (y_true, y_pred)  
+
+
+| Confusion Matrix |            |   Actual   |  Actual  |
+|------------------|:----------:|:----------:|:--------:|
+|                  |            |  Positive  | Negative |
+| **Predicted**    |  Positive  |     TP     |    FP    |
+| **Predicted**    |  Negative  |     FN     |    TN    |
+
+- <b>accuracy_matrix</b> (y_true, y_pred)
+

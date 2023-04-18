@@ -1,7 +1,9 @@
 
 <h4>Custom Statistics Function including: </h4>
 
-- <b>sigmoid</b> (z)
+- <b>sigmoid</b> (z)  
+sigmoid: 
+$$ y = g(z) = \frac{1}{1 + e^z} = \frac{e^z}{1 + e^z} $$
 
 - <b>logit</b> (p)
 
@@ -21,4 +23,8 @@
 | **Predicted**    |  Negative  |     FN     |    TN    |
 
 - <b>accuracy_matrix</b> (y_true, y_pred)
+
+- <b>gini_impurity</b> (class_variable) 
+
+- <b>entropy</b> (class_variable)
 

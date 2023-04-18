@@ -141,3 +141,15 @@ class Statistics:
 
         return metrics_df
 
+
+    @staticmethod
+    def gini_impurity(class_variable):
+        _, counts = np.unique(class_variable, return_counts=True)
+        probs = counts/len(class_variable)
+        return 1 - np.sum(probs ** 2)
+
+
+    @staticmethod
+    def entropy(class_variable):
+        _, counts = np.unique
+

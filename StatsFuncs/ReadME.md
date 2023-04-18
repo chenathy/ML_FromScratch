@@ -2,8 +2,7 @@
 <h4>Custom Statistics Function including: </h4>
 
 - <b>sigmoid</b> (z)  
-sigmoid: 
-$$ y = g(z) = \frac{1}{1 + e^z} = \frac{e^z}{1 + e^z} $$
+sigmoid: s$ y = g(z) = \frac{1}{1 + e^z} = \frac{e^z}{1 + e^z} $
 
 - <b>logit</b> (p)
 

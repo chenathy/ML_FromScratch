@@ -16,7 +16,7 @@
     <li>&#128077 <b>Logistic Regression</b></li>
     <li>&#128077 <b>Linear and Logistic Regression</b></li>
     <li>&#128077 <b>Decision Tree</b></li>
-    <li>&#8987   <b>Random Forest</b></li>
+    <li>&#128293   <b>Random Forest</b></li>
     <li>&#8987   <b>Naive Bayes</b></li>
     <li>&#8987   <b>LDA</b> (Linear Discriminant Analysis)</li>
     <li>&#8987   <b>SVM</b> (Support Vector Machine)</li>

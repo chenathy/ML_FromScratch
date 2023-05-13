@@ -141,3 +141,25 @@ class Statistics:
 
         return metrics_df
 
+
+    @staticmethod
+    def bootstrap_sample(X, y):
+        """
+
+        :param X: np.array (features)
+        :param y: np.array (target)
+        :return: X_samples, y_samples
+        """
+
+        X_, y_ = X.copy(), y.copy()
+        X_.reset_index(inplace=True, drop=True)
+        y_ = y_.reset_index(drop=True)
+
+        # Sample with replacement
+        sample_indexes = np.random.choice(
+            a=X.shape[0],
+            size=X.shape[0],
+            replace=True
+        )
+
+        return X_.iloc[sample_indexes, :], y_[sample_indexes]

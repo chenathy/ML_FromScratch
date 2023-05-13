@@ -1,7 +1,6 @@
 # Load Modules
 import numpy as np
-import pandas as pd
-from Node import Node
+from DecisionTree.Node import Node
 
 
 class DecisionTree:
@@ -23,7 +22,7 @@ class DecisionTree:
         return np.var(parent) - np.sum(child_weights * np.array([np.var(child) for child in child_list]))
 
 
-    def target_value(self, y):
+    def _target_value(self, y):
         return np.mean(y)
 
 
@@ -93,11 +92,11 @@ class DecisionTree:
 
             else:
                 print(f'Tree split stopped... leaf node returned')
-                return Node(value=self.target_value(y))
+                return Node(value=self._target_value(y))
 
         else:
             print('Tree didn\'t get to splitted.')
-            return Node(value=self.target_value(y))
+            return Node(value=self._target_value(y))
 
 
 
@@ -114,7 +113,7 @@ class DecisionTree:
             return self._predict_row(row, node.right)
 
 
-    def predict(self, X, y):
+    def predict(self, X):
         return [self._predict_row(row, self.root) for index, row in X.iterrows()]
 
 

@@ -1,7 +1,6 @@
 # Load Modules
 import numpy as np
-import pandas as pd
-from Node import Node
+from DecisionTree.Node import Node
 
 
 class DecisionTree:
@@ -110,7 +109,7 @@ class DecisionTree:
             or (num_samples < self.min_sample_split) \
             or (num_classes != 1):
 
-            print('Start splitting the tree at depth {depth}...')
+            print(f'Start splitting the tree at depth {depth}...')
             best_feature_, best_threshold_, best_gain_ = self._best_split(X, y)
             print(f'best gain value: {best_gain_}')
             print(f'best feature: {best_feature_}')

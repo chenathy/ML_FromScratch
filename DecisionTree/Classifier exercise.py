@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 
-from Classifier import DecisionTree
+from DecisionTree.Classifier import DecisionTree
 
 
 # Data Prep
@@ -30,7 +30,7 @@ classifier.print_tree()
 
 
 # Predict
-y_pred =classifier.predict(X_test)
+y_pred = classifier.predict(X_test)
 
 
 # Performace

@@ -22,3 +22,4 @@
 
 - <b>accuracy_matrix</b> (y_true, y_pred)
 
+- <b>bootstrap_sample</b> (X, y)

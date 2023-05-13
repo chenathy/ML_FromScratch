@@ -2,9 +2,7 @@
 import numpy as np
 import pandas as pd
 
-import sys
-sys.path.extend(['/Users/chenyukai/PycharmProjects/ML_FromScratch/Decision Tree'])
-from Regressor import DecisionTree
+from DecisionTree.Regressor import DecisionTree
 
 
 # Data Prep
@@ -34,7 +32,7 @@ regressor.print_tree(regressor.root)
 
 
 # Predict
-y_pred = regressor.predict(X_test, y_test)
+y_pred = regressor.predict(X_test)
 
 
 # Evaluate Model Performance

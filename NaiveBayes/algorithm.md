@@ -9,6 +9,35 @@
     <li><h3>...</h3></li>
 </ul>
 
+<dl>
+    <dt>Gather training data: </dt>
+    <dd>Collect a set of labeled training data that can be used to train the Naive Bayes model. 
+        This data should include a set of features or attributes for each example, along with the corresponding class labels.
+    </dd>
+    <dt>Prepare the data: </dt>
+    <dd>Once you have the training data, you need to preprocess and clean it. 
+        This involves converting the raw data into a form that can be used by the Naive Bayes algorithm. 
+        This may include steps such as tokenizing text data, removing stop words, and converting categorical data into numerical representations.</dd>
+    <dt>Compute prior probabilities:</dt>
+    <dd>Calculate the prior probabilities of each class label in the training data. 
+        This involves determining the frequency of each class label in the data set.
+    </dd>
+    <dt>Compute conditional probabilities:</dt>
+    <dd>For each feature and class label combination, calculate the conditional probability of that feature given the class label. 
+        This involves calculating the frequency of each feature for each class label and dividing by the total number of examples in that class.
+    </dd>
+    <dt>Apply Bayes' theorem:</dt>
+    <dd>Use Bayes' theorem to calculate the probability of each class label given a set of input features. 
+        This involves multiplying the prior probability of each class label by the conditional probability of each feature given that class label, 
+        and normalizing the result to obtain a probability distribution over all possible class labels.
+    </dd>
+    <dt>Make predictions: </dt>
+    <dd>Once the Naive Bayes model has been trained, it can be used to make predictions on new, unlabeled data. To do this, simply apply the model to the input features of the new data and choose the class label with the highest probability.
+    </dd>
+</dl>
+ 
+
+
 <br>
 
 <b>In many cases, the denominator P(X) is not required for making class predictions.  

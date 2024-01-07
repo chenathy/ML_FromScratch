@@ -52,3 +52,15 @@ The hyperparameters can be tuned using cross-validation techniques to find the o
 SVM is originally designed for binary classification problems.  
 
 However, it can be extended to multiclass classification using various methods such as one-vs-one and one-vs-all approaches.
+
+
+--------------------
+
+### SVM Error = Margin Error + Classification Error
+* Margin Error: ​ ∣∣w∣∣
+* Classification Error: max(0,1−y i ​(w⋅x i ​ −b)))
+
+The objective function for a linear Support Vector Machine (SVM) with regularization is typically formulated as follows:  
+minimize( 1/2 *​ ∣∣w∣∣ ^ 2 + C⋅∑ ​ max(0,1−y i ​(w⋅x i ​ −b)))
+
+C: regularization parameter

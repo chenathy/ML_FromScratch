@@ -1,18 +1,18 @@
-###Purpose
+<h3>Purpose</h3>
 It's a binary classifier that decides whether an input belongs to one class or another.
 
-###Structure:
+<h3>Structure:</h3>
 
-**Input layer**: 
+<b>Input layer</b>: 
 𝑥1 , 𝑥2, ... , 𝑥𝑛
 
-**Weights**: 
+<b>Weights</b>: 
 𝑤1, 𝑤2, ... , 𝑤𝑛
 
-**Bias**: 
+<b>Bias</b>: 
 𝑏
 
-**Activation function** (usually a step function):
+<b>Activation function</b> (usually a step function):
 
             1  if  𝑤 ⋅ 𝑥 + 𝑏 > 0  
 output = {
@@ -20,8 +20,8 @@ output = {
             0  otherwise
 
 
-###Learning Rule
-(Perceptron update rule):
+<h3>Learning Rule</h3> (Perceptron update rule):
+
 Adjust weights as: 
 
 𝑤𝑖 : = 𝑤𝑖 + Δ𝑤𝑖 
@@ -35,7 +35,7 @@ where  Δ𝑤𝑖 = 𝜂 (𝑦 − 𝑦^) 𝑥𝑖
 𝑦^ is the predicted label.
 
 
-###Limitations:
+<h3>Limitations:</h3>
 Can only solve linearly separable problems.
 
 Fails for cases like the XOR problem.

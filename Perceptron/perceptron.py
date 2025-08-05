@@ -1,8 +1,7 @@
-import pandas as pd
 import numpy as np
 
 
-def add_bias_to_input(train_x):
+def add_bias_to_input(train_data):
     """
     Adding a bias column to matrix train X
     :param [x]:
@@ -10,8 +9,8 @@ def add_bias_to_input(train_x):
     """
 
     # Convert matrix into numpy n-dim arrays
-    if isinstance(train_x, np.ndarray):
-        train_x = np.array(train_x)
+    if isinstance(train_data, np.ndarray):
+        train_x = np.array(train_data)
 
     if train_x.ndim > 1:
         # Multiple row matrix
@@ -33,7 +32,7 @@ def activation_func(input: float, func_name='relu') -> float:
         print('Activation function name is not provided')
 
 
-def train_data(train_x, y, learning_rate=0.05, epoches=10):
+def train_data(X, y, learning_rate=0.05, epoches=10):
     """
     Step 0:
         X (training data): m x n
@@ -42,7 +41,7 @@ def train_data(train_x, y, learning_rate=0.05, epoches=10):
         y (label data): 1 x m
             single row of binary data (i.e. 0 or 1 only)
 
-        learning rate: 0.05
+        learning_rate: 0.05
         epoches: # of model training through entire data
 
     Step 1: Initializing the weights with 0s: 1 x n
@@ -66,15 +65,15 @@ def train_data(train_x, y, learning_rate=0.05, epoches=10):
     Step 7: Return trained weights
          Bias is included in weights, 1st element
 
-    :param train_x, y, learning_rate, epoches
+    :param X, y, learning_rate, epoches
     :return: updated weights
     """
 
     # Append Bias column to train data
-    train_x = add_bias_to_input(train_x)
+    train_x = add_bias_to_input(X)
 
     # Step 1
-    weights = np.zeros((1, train_x.shape[1]))
+    weights = np.zeros((1, X.shape[1]))
 
     for epoch in range(epoches):
         # Step 2
@@ -116,26 +115,3 @@ def predict_data(val_x, trained_weights):
     z_array = np.dot(trained_weights, val_x.transpose())
     return np.where(z_array > 0, 1, 0)
 
-
-
-
-# Unit test
-## Adding Bias to Input
-sample_input = np.random.rand(20, 5)
-sample_input_int = np.random.randint(1, 10, (20, 5))
-sample_single_row = np.random.rand(1, 5)
-
-## Activation Func
-test_z = 2
-activation_func(2)
-
-## Train data
-y = np.random.randint(0, 2, (1, 20))
-seudo_weights = train_data(
-    sample_input,
-    y
-)
-
-
-## Predict Data
-predict_data(sample_input, seudo_weights)

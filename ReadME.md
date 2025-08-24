@@ -22,7 +22,7 @@
     <li>&#128077 <b>PCA</b> (Principal Component Analysis)</li>
     <li>&#128077 <b>Perceptron</b></li>
     <li>&#128077 <b>AdaBoost</b></li>
-    <li>&#128293   Load Machine Learning Data From Files</li>
+    <li>&#128077   Load Machine Learning Data From Files</li>
 
 </ul>
 
